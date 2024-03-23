@@ -19,5 +19,6 @@ sudo apt remove qtchooser
 sudo apt install libqt5gui5
 ```
 
-###
-
+### Qt Designer and Python
+Install Qt Designer on Windows or Mac. 
+https://build-system.fman.io/qt-designer-download
