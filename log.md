@@ -19,6 +19,18 @@ sudo apt remove qtchooser
 sudo apt install libqt5gui5
 ```
 
+### Same errors with PySide6:
+
+*qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.*
+
+```bash
+sudo apt install libxcb-cursor0
+```
+
 ### Qt Designer and Python
+
 Install Qt Designer on Windows or Mac. 
 https://build-system.fman.io/qt-designer-download
+
+###
+
