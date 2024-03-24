@@ -1,4 +1,5 @@
 .venv/
 activate
 *.pdf
-
+fugue-icons/
+*.png
