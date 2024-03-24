@@ -1,16 +1,12 @@
-import os
 import sys
 
-from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow,
-    QLabel,
+    QComboBox,
     )
 
-basedir = os.path.dirname(__file__)
-print("Current working directory: ", os.getcwd())
-print("Paths are relative to: ", basedir)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -18,10 +14,19 @@ class MainWindow(QMainWindow):
         
         self.setWindowTitle("Моё приложение")
         
-        widget = QLabel("Hello, Yachiru!")
-        widget.setPixmap(QPixmap(os.path.join(basedir, "./pic/yachiru.png")))
+        widget = QComboBox()
+        widget.addItems(["One", "Two", "Three"])
+        
+        widget.currentIndexChanged.connect(self.index_changed)
+        widget.currentTextChanged.connect(self.text_changed)
         
         self.setCentralWidget(widget)
+        
+    def index_changed(self, i):
+        print(i)
+        
+    def text_changed(self, s):
+        print(s)
         
 
 app = QApplication(sys.argv)
